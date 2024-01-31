@@ -9,10 +9,12 @@ module.exports = {
   ],
   theme: {
     colors:{
-      greensb: '#79af30',
-      orangesb: '#bb5c37',
-      yellowsb: '#FCBF49',
-      chocolatesb: '#481D24',
+      primary: '#68A9A7',
+      secondary: '#6D8B2D',
+      terciary: '#FCBF49',
+      terciaryactive: '#F7C5A8',
+      quaternary: '#BB5C37',
+      quaternaryhover: '#E6A4B4',
       
     },
     extend: {
