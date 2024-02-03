@@ -1,38 +1,18 @@
-<div class="flex">
-  <section id="lateral-menu" class="w-1/5 bg-secondary h-dvh">
-    <div class="lateral-menu">
-      <div class="lateral-menu-header">
-        <h1 class="text-2xl font-bold">Blog</h1>
-      </div>
-      <div class="lateral-menu-body">
-        <ul class="menu">
-          <li class="menu-item">
-            <%= link_to "Home", root_path, class: "menu-link" %>
-          </li>
-          <li class="menu-item">
-            <%= link_to "Posts", posts_path, class: "menu-link" %>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="blog-body" class="w-4/5">
     <div class="blog-posts">
-      <h1 class="text-3xl font-bold mb-6">Posts</h1>
-      <% @posts.each do |post| %>
-        <%= link_to post_path(post) do %>
-          <div class="blog-post bg-gray-100 p-4 mb-4">
-            <h2 class="text-2xl font-bold mb-2"><%= post.title %></h2>
-            <p class="text-lg mb-4"><%= truncate(post.body, length: 100) %></p>
+          <h1 class="text-3xl font-bold mb-6">Posts</h1>
+          <div>
+          <% @posts.each do |post| %>
+            <div class="blog-post bg-quaternary p-4 mb-4">
+              <%= link_to post_path(post) do %>
+                <h2 class="text-2xl font-bold mb-2"><%= post.title %></h2>
+                <p class="text-lg mb-4"><%= truncate(post.body, length: 100) %></p>
+              <% end %>
+              <div class="post-actions mt-4">
+                <p class="inline-block mr-4"><%= link_to "Edit", edit_post_path(post), class: "text-blue-500" %></p>
+                <p class="inline-block"><%= link_to "Delete", post_path(post), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-500" %></p>
+              </div>
+            </div>
+          <% end %>
           </div>
-        <% end %>
-        <div class="post-actions mt-4">
-          <p class="inline-block mr-4"><%= link_to "Edit", edit_post_path(post), class: "text-blue-500" %></p>
-          <p class="inline-block"><%= link_to "Delete", post_path(post), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-500" %></p>
+          <%= link_to "New Post", new_post_path, class: "text-blue-500 mt-4" %>
         </div>
-      <% end %>
-      <%= link_to "New Post", new_post_path, class: "text-blue-500 mt-4" %>
-    </div>
-  </section>
-</div>
