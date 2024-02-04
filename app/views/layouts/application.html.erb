@@ -13,26 +13,12 @@
 
     <body class="bg-primary">
       <main class="container flex">
-          <section id="lateral-menu" class="w-1/5 bg-secondary h-dvh">
-            <div class="lateral-menu">
-              <div class="lateral-menu-header">
-                <h1 class="text-2xl font-bold">Blog</h1>
-              </div>
-              <div class="lateral-menu-body">
-                <ul class="menu">
-                  <li class="menu-item">
-                    <%= link_to "Home", root_path, class: "menu-link" %>
-                  </li>
-                  <li class="menu-item">
-                    <%= link_to "Posts", posts_path, class: "menu-link" %>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <section id="content" class="w-4/5">
-            <%= yield %>
-          </section>
+            <section id="lateral-menu" class="bg-secondary p-4 w-1/5 h-svh">
+              <%= render partial: "lateral_menu" %>
+            </section>
+            <section id="content" class="h-svh">
+              <%= yield %>
+            </section>
       </main>
     </body>
   </html>
