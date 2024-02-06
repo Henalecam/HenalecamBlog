@@ -1,8 +1,8 @@
-    <div class="blog-posts">
-          <h1 class="text-3xl font-bold mb-6">Posts</h1>
+    <div class="blog-posts mx-auto px-6">
+        <h1 class="text-3xl font-bold mb-6">Posts</h1>
           <div>
           <% @posts.each do |post| %>
-            0p<div class="blog-post bg-quaternary p-4 mb-4">
+            <div class="blog-post bg-quaternary p-4 mb-4">
               <%= link_to post_path(post) do %>
                 <h2 class="text-2xl font-bold mb-2"><%= post.title %></h2>
                 <p class="text-lg mb-4"><%= truncate(post.body, length: 100) %></p>
