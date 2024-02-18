@@ -11,14 +11,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-    <body class="bg-primary">
-      <main class="container flex">
-            <section id="lateral-menu" class="bg-secondary p-4 w-1/5 h-svh">
-              <%= render partial: "lateral_menu" %>
-            </section>
-            <section id="content" class="h-svh">
-              <%= yield %>
-            </section>
-      </main>
-    </body>
-  </html>
+  <body class="bg-primary p-0 m-0">
+    <main class="container flex h-screen">
+      <section>
+        <%= render partial: "lateral_menu" %>
+      </section>
+      <section id="content">
+        <%= yield %>
+      </section>
+    </main>
+  </body>
+</html>

@@ -27,3 +27,30 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
+
+.lateral-menu{
+  top: 0;
+  width: 375px;
+  height: 100%;
+  background-color: #6D8B2D;
+}
+
+.menu-link{
+  text-decoration: none;
+  color: #333;
+  background-color: #BB5C37;
+  font-size: 1em;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-radius: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.menu-link:hover{
+  background-color: #E67E53;
+}
+
+.menu-link:active{
+  background-color: #9E3C23;
+} 
