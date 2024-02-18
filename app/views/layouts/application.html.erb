@@ -17,6 +17,10 @@
         <%= render partial: "lateral_menu" %>
       </section>
       <section id="content">
+        <% if notice %>
+          <div class="notice"><%= notice %></div>
+        <% end %>
+
         <%= yield %>
       </section>
     </main>
