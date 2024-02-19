@@ -1,16 +1,19 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="max-w-md w-full mx-auto p-6 bg-white rounded-md shadow-md">
+    <h1 class="text-2xl text-center mb-6">Novo Post</h1>
 
-<h1>Novo Post</h1>
+    <%= form_for @post do |f| %>
+      <div class="mb-4">
+        <%= f.label :title, class: "block text-gray-700 text-sm font-bold mb-2" %>
+        <%= f.text_field :title, class: "form-input mt-1 block w-full" %>
+      </div>
 
-<%= form_for @post do |f| %>
-  <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control" %>
+      <div class="mb-4">
+        <%= f.label :body, class: "block text-gray-700 text-sm font-bold mb-2" %>
+        <%= f.text_area :body, class: "form-textarea mt-1 block w-full" %>
+      </div>
+
+      <%= f.submit "Criar", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+    <% end %>
   </div>
-
-  <div class="form-group">
-    <%= f.label :body %>
-    <%= f.text_area :body, class: "form-control" %>
-  </div>
-
-  <%= f.submit "Criar", class: "btn btn-primary" %>
-<% end %>
+</div>

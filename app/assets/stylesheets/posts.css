@@ -1,0 +1,7 @@
+.blog-post {
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100vw - 400px);
+    border-radius: 10px;
+}

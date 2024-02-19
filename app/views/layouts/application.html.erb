@@ -12,7 +12,7 @@
   </head>
 
   <body class="bg-primary p-0 m-0">
-    <main class="container flex h-screen">
+    <main class="container h-screen w-screen flex">
       <section>
         <%= render partial: "lateral_menu" %>
       </section>
@@ -20,9 +20,15 @@
         <% if notice %>
           <div class="notice"><%= notice %></div>
         <% end %>
-
         <%= yield %>
       </section>
     </main>
   </body>
 </html>
+
+           <script>
+          /*   setTimeout(function() {
+               document.querySelector('.notice').style.display = 'none';
+             }, 2000);
+             */
+           </script>

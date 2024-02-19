@@ -7,10 +7,9 @@
 
 .menu-link{
     text-decoration: none;
-    color: #333;
-    background-color: #BB5C37;
+    background-color: #FCBF49;
     padding: 25px;
-    border-radius: 1em;
+    border-radius: 0.25em;
     transition: background-color 0.3s ease;
 }
 
@@ -21,9 +20,9 @@
 }
 
 .menu-link:hover{
-    background-color: #E67E53;
+    background-color: #ffd482;
 }
 
 .menu-link:active{
-    background-color: #9E3C23;
+    background-color: #fcbb44
 }
