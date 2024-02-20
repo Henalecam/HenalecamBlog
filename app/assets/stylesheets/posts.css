@@ -1,5 +1,5 @@
 .blog-post {
-    overflow-wrap: break-word;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: calc(100vw - 400px);

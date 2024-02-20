@@ -22,7 +22,7 @@ body{
   font-size: 32px;
   line-height: 1.6;
   color: #000;
-  background-color: #f4f4f4;
+  background: linear-gradient(90deg, #6D8B2D 375px, #68A9A7 375px);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
