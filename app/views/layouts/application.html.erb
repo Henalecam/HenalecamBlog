@@ -11,20 +11,20 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container w-screen flex">
-      <section>
-        <%= render partial: "lateral_menu" %>
-      </section>
-      <section id="content">
-        <% if notice %>
-          <div class="notice"><%= notice %></div>
-        <% end %>
-        <%= yield %>
-      </section>
-    </main>
-  </body>
-</html>
+    <body style="height: 100vh; margin: 0;">
+      <main class="container flex" style="height: 100%;">
+        <section style="flex: 1;">
+          <%= render partial: "lateral_menu" %>
+        </section>
+        <section id="content" style="flex: 1;">
+          <% if notice %>
+            <div class="notice"><%= notice %></div>
+          <% end %>
+          <%= yield %>
+        </section>
+      </main>
+    </body>
+  </html>
 
            <script>
           /*   setTimeout(function() {

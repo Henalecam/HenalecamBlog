@@ -1,7 +1,22 @@
 .blog-post {
-    white-space: nowrap;
+    white-space: normal;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     width: calc(100vw - 400px);
     border-radius: 10px;
+}
+
+.post-options {
+    width: 50%;
+    text-align: center;
+    background-color: #FCBF49;
+    transition: width 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.post-options:hover {
+    width: 100%;
+    text-align: center;
+    background-color: #F77F00;
 }

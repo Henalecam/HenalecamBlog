@@ -1,28 +1,17 @@
 <%= stylesheet_link_tag "lateral-menu" %>
 <div class="lateral-menu">
-  <div class="lateral-menu-header">
-    <h1 class="font-bold text-center">Henalecam Blog</h1>
+  <div class="box-menu-link">
+        <%= button_to "Dev Blogs", posts_path, method: :get, class: "menu-button" %>
+        <%= button_to "Generals", posts_path, method: :get, class: "menu-button" %>
   </div>
-  <div class="lateral-menu-body">
-    <ul>
-      <li class="menu-nav">
-        <%= link_to "Dev Blogs", posts_path, class:"menu-link" %>
-      </li>
-      <li class="menu-nav">
-        <%= link_to "Generals", posts_path, class:"menu-link" %>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <li>
-          <%= link_to image_tag("https://img.icons8.com/bubbles/150/linkedin.png", alt: "linkedin"), "https://www.linkedin.com/in/henalecam", target: "_blank" %>
-        </li>
-        <li>
-          <%= link_to image_tag("https://img.icons8.com/bubbles/150/github.png", alt: "github"), "https://github.com/", target: "_blank" %>
-        </li>
-        <li>
-          <%= link_to image_tag("https://img.icons8.com/bubbles/150/instagram-new--v2.png", alt: "instagram"), "https://www.instagram.com/henalecam", target: "_blank" %>
-        </li>
-    </ul>
+  <div class="box-menu-socials">
+      <% social_links = [
+        { url: "https://www.linkedin.com/in/henalecam", image: "https://img.icons8.com/bubbles/200/linkedin.png", alt: "linkedin" },
+        { url: "https://github.com/", image: "https://img.icons8.com/bubbles/200/github.png", alt: "github" },
+        { url: "https://www.instagram.com/henalecam", image: "https://img.icons8.com/bubbles/200/instagram-new--v2.png", alt: "instagram" }
+      ] %>
+      <% social_links.each do |link| %>
+          <%= link_to image_tag(link[:image], alt: link[:alt]), link[:url], target: "_blank" %>
+      <% end %>
   </div>
 </div>
