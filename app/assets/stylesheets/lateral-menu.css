@@ -20,6 +20,7 @@
     height: 75px;
     width: 250px;
     transition: background-color 0.3s ease;
+    box-shadow: inset 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 .menu-button:hover{
     background-color: #ffd482;
@@ -35,6 +36,15 @@
     justify-content: space-around;
     align-items: center;
     height: 100%;
+}
+.social-link{
+    box-shadow: 0 25px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+.social-link:hover{
+    background-color: #ffd48220;
 }
 /* 
 .lateral-menu-links

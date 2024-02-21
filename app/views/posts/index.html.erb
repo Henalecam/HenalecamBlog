@@ -1,6 +1,5 @@
 <%= stylesheet_link_tag "posts" %>
     <div class="blog-posts">
-      <h1 class="text-3xl font-bold mb-3 text-center">Posts</h1>
       <div>
         <% @posts.each do |post| %>
             <div class="blog-post bg-quaternary mb-4 w-full min-w-400px">
@@ -22,7 +21,8 @@
           </div>
         <% end %>
       </div>
-      <%= link_to "New Post", new_post_path, class: "text-blue-500 mt-4" %>
+      <div class="text-center">
+      <%= link_to "New Post", new_post_path %>
       <%= will_paginate @posts, previous_label: 'Previous', next_label: 'Next' %>
-
+      </div>
     </div>
