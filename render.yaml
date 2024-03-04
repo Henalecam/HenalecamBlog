@@ -1,6 +1,6 @@
 databases:
-  - name: henalecam_blog_production
-    databaseName: henalecam_blog_production
+  - name: henalecam_blog_development
+    databaseName: henalecam_blog_development
     user: henalecam_blog
     plan: free
 
@@ -15,7 +15,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: henalecam_blog_production
+          name: henalecam_blog_development
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
