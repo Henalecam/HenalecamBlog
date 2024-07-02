@@ -3,9 +3,9 @@
         <% @posts.each do |post| %>
             <div class="blog-post bg-quaternary mb-4 w-full min-w-400px">
             <%= link_to post_path(post) do %>
-              <h2 class="text-2xl font-bold text-center mb-2"><%= post.title %></h2>
-              <p class="text-lg mb-4"><%= truncate(post.body, length: 100) %></p>
-            <% end %>
+              <h2 class="text-2xl font-bold text-center mb-2"><%= truncate(post.title, length:100) %></h2>
+                <p class="text-lg mb-4 text-center"><%= truncate(post.body, length: 100) %></p>
+              <% end %>
             <div class="post-actions flex mt-4">
               <%= link_to edit_post_path(post), class: "text-blue-500 post-options" do %>
                 <button class="inline-block">Edit</button>
